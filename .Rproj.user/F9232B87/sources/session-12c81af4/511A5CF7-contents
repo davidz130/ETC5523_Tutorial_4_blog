@@ -1,0 +1,36 @@
+---
+title: "Penguins are cute"
+date: 20 August 2023
+author: David Z
+format: html
+editor: visual
+---
+
+## Loading in packages
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#| message: FALSE
+library(palmerpenguins)
+library(tidyverse)
+```
+
+
+## How does the flipper length affect the body mass of penguins
+```{r}
+df <- penguins %>% 
+  na.omit()
+
+df %>% 
+  ggplot(aes(x = flipper_length_mm, 
+             y = body_mass_g, 
+             colour = species)) +
+  geom_point() +
+  facet_wrap(~sex) +
+  xlab("Flipper length in mm") +
+  ylab("Body mass in gram") +
+  ggtitle("Scatter plot on flipper length and body mass by gender and species")
+```
+
+It seems there is a positive relationship between flipper length and body mass for penguins. Moreover, the ratio between flipper length and body mass is similar between the Adelie and Chinstrap species. And the ratio is much larger for Gentoo.

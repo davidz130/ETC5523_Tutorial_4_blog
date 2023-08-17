@@ -1,0 +1,16 @@
+{
+  "hash": "5155f1dae020f5b4fe18668fc96b6b6f",
+  "result": {
+    "markdown": "---\ntitle: \"Penguins are cute\"\ndate: 20 August 2023\nauthor: David Z\nformat: html\neditor: visual\n---\n\n\n## Loading in packages\n\nWhen you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(palmerpenguins)\nlibrary(tidyverse)\n```\n:::\n\n\n\n## How does the flipper length affect the body mass of penguins\n\n::: {.cell}\n\n```{.r .cell-code}\ndf <- penguins %>% \n  na.omit()\n\ndf %>% \n  ggplot(aes(x = flipper_length_mm, \n             y = body_mass_g, \n             colour = species)) +\n  geom_point() +\n  facet_wrap(~sex) +\n  xlab(\"Flipper length in mm\") +\n  ylab(\"Body mass in gram\") +\n  ggtitle(\"Scatter plot on flipper length and body mass by gender and species\")\n```\n\n::: {.cell-output-display}\n![](Index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\nIt seems there is a positive relationship between flipper length and body mass for penguins. Moreover, the ratio between flipper length and body mass is similar between the Adelie and Chinstrap species. And the ratio is much larger for Gentoo.\n",
+    "supporting": [
+      "Index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

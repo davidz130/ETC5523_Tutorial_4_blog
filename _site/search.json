@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ETC5523_tutorial_4_blog",
+    "section": "",
+    "text": "Penguins are cute\n\n\n\n\n\n\n\n\n\n\n\n\nAug 20, 2023\n\n\nDavid Z\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Penguins are cute/Index.html",
+    "href": "posts/Penguins are cute/Index.html",
+    "title": "Penguins are cute",
+    "section": "",
+    "text": "When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "posts/Penguins are cute/Index.html#loading-in-packages",
+    "href": "posts/Penguins are cute/Index.html#loading-in-packages",
+    "title": "Penguins are cute",
+    "section": "",
+    "text": "When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "posts/Penguins are cute/Index.html#how-does-the-flipper-length-affect-the-body-mass-of-penguins",
+    "href": "posts/Penguins are cute/Index.html#how-does-the-flipper-length-affect-the-body-mass-of-penguins",
+    "title": "Penguins are cute",
+    "section": "How does the flipper length affect the body mass of penguins",
+    "text": "How does the flipper length affect the body mass of penguins\n\ndf &lt;- penguins %&gt;% \n  na.omit()\n\ndf %&gt;% \n  ggplot(aes(x = flipper_length_mm, \n             y = body_mass_g, \n             colour = species)) +\n  geom_point() +\n  facet_wrap(~sex) +\n  xlab(\"Flipper length in mm\") +\n  ylab(\"Body mass in gram\") +\n  ggtitle(\"Scatter plot on flipper length and body mass by gender and species\")\n\n\n\n\nIt seems there is a positive relationship between flipper length and body mass for penguins. Moreover, the ratio between flipper length and body mass is similar between the Adelie and Chinstrap species. And the ratio is much larger for Gentoo."
+  }
+]
